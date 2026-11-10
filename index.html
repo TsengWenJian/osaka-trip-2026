@@ -241,6 +241,9 @@ html{scroll-behavior:smooth}
 .pass::before{left:-13px;border-top-color:transparent;border-left-color:transparent;transform:rotate(-45deg)}
 .pass::after{right:-13px;border-bottom-color:transparent;border-right-color:transparent;transform:rotate(-45deg)}
 .pass .tm{color:var(--muted)!important}
+/* no dots */
+.hero::before,.hero .sub.acts::before,.hero .sub.acts::after{content:none!important;display:none!important}
+.hero .sub.acts{padding:8px}
 </style>
 </head>
 <body>
