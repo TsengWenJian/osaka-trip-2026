@@ -488,7 +488,7 @@ html{scroll-behavior:smooth}
       if(a.getAttribute('href')==='#'+id){a.setAttribute('aria-current','page');a.scrollIntoView({block:'nearest',inline:'center'});}
       else a.removeAttribute('aria-current');
     });
-    if(scroll){var nav=document.querySelector('nav.tabs');var top=nav.getBoundingClientRect().top+window.scrollY;if(window.scrollY>top)window.scrollTo(0,top);}
+    if(scroll){var nav=document.querySelector('nav.tabs');var sec=document.getElementById(id);var y=sec.getBoundingClientRect().top+window.scrollY-nav.offsetHeight-8;window.scrollTo({top:Math.max(0,y),behavior:'instant'});}
   }
   document.addEventListener('click',function(e){
     var a=e.target.closest('a[href^="#"]'); if(!a) return;
