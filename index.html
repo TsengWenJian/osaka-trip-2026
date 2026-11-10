@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>大阪三日遊 2026</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Bebas+Neue&family=Share+Tech+Mono&display=swap">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Layout: theme-park / movie-studio day — bright sky ground, marquee-light hero sign, ticket-stub flights, gold + cinema red accents, white rounded cards */
+:root{
+  --sky:#E6F2FF; --sky-dot:#CFE3FA; --paper:#FFFFFF; --ink:#1C2440; --muted:#5B6683; --line:#D8E2F0;
+  --navy:#1B2E63; --navy-soft:#E8EEFA; --gold:#F4B321; --gold-soft:#FFF4D6; --red:#E0392F; --red-soft:#FDE6E3; --blue:#2F7FD8;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --f-show:"Bebas Neue","Noto Sans TC",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background-color:var(--sky);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.75;
+  background-image:radial-gradient(var(--sky-dot) 1.6px,transparent 1.8px);background-size:22px 22px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--sky)}
+a{color:inherit}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;line-height:1.35;font-weight:700;text-wrap:balance}
+p{margin:0}
+.num{font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-show);font-size:18px;letter-spacing:.12em;color:var(--blue)}
+
+/* hero = marquee sign */
+.hero{margin-top:26px;padding:30px 26px 28px;background:var(--navy);color:#fff;border-radius:18px;text-align:center;position:relative;
+  box-shadow:0 0 0 6px var(--gold),0 10px 24px -12px rgba(27,46,99,.5)}
+.hero::before{content:"";position:absolute;inset:10px;border-radius:12px;pointer-events:none;
+  background:
+   radial-gradient(circle,#FFE38A 0 3px,transparent 3.5px) 0 0/22px 22px repeat-x,
+   radial-gradient(circle,#FFE38A 0 3px,transparent 3.5px) 0 100%/22px 22px repeat-x;opacity:.9}
+.hero .eyebrow{color:var(--gold);font-size:20px;letter-spacing:.3em}
+.hero h1{font-size:clamp(34px,7.5vw,52px);margin-top:6px;letter-spacing:.06em;color:#fff;text-shadow:0 3px 0 var(--red);display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.3em}
+.hero h1 em{font-style:normal;font-size:.4em;color:var(--navy);background:var(--gold);padding:.25em .8em;border-radius:6px;letter-spacing:.2em;text-shadow:none;transform:rotate(-6deg);
+  -webkit-mask:radial-gradient(circle .35em at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle .35em at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat;
+  mask:radial-gradient(circle .35em at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle .35em at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat}
+.hero .sub{color:#DCE5FA;margin:14px auto 0;max-width:46ch}
+
+/* tabs */
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--sky) 92%,transparent)}
+nav.tabs .wrap{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-block:14px 12px}
+nav.tabs a{flex:none;text-decoration:none;font-size:14.5px;font-weight:700;padding:6px 16px;border-radius:999px;background:var(--paper);color:var(--navy);border:2px solid var(--line)}
+nav.tabs a:hover,nav.tabs a:focus-visible{border-color:var(--gold);outline:none}
+nav.tabs a[aria-current="page"]{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+
+/* pages */
+main>section{margin-block:6px 18px;padding:26px 22px 30px;background:var(--paper);border-radius:18px;box-shadow:0 6px 18px -12px rgba(27,46,99,.35);scroll-margin-top:64px}
+main>section[hidden]{display:none!important}
+@media (max-width:480px){main>section{padding:22px 14px 26px}.hero{padding:28px 16px 24px}}
+.sec-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.sec-title h2{font-size:19px;color:var(--navy);display:inline-flex;align-items:center;gap:8px}
+.sec-title h2::before{content:"★";color:var(--gold);font-size:18px}
+.sec-title .eyebrow{font-size:16px;color:var(--muted)}
+.block{margin-top:34px;padding-top:26px;border-top:2px dashed var(--line)}
+#overview>.block:first-child{margin-top:0;padding-top:0;border-top:0}
+
+/* day header: clapper badge */
+.day-head{display:flex;gap:16px;align-items:center;margin-bottom:22px}
+.date{flex:none;width:66px;height:66px;border-radius:12px;background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:12px}
+.date::before{content:"";position:absolute;inset:0 0 auto;height:13px;background:repeating-linear-gradient(-45deg,#fff 0 7px,var(--navy) 7px 14px)}
+#day2 .date{background:var(--red)}
+#day2 .date::before{background:repeating-linear-gradient(-45deg,#fff 0 7px,var(--red) 7px 14px)}
+.date .d{font-family:var(--f-show);font-size:32px;line-height:1}
+.date .w{font-family:var(--f-show);font-size:12px;letter-spacing:.2em;color:var(--gold)}
+.day-head .txt{min-width:0}
+.day-head .eyebrow{color:var(--blue)}
+#day2 .day-head .eyebrow{color:var(--red)}
+.day-head h2{font-size:21px;color:var(--navy)}
+.day-head p.lead{color:var(--muted);font-size:14.5px;margin-top:6px}
+
+/* timeline list */
+ol.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:58px 1fr;gap:0 12px;padding-bottom:12px}
+.tl time{font-family:var(--f-show);font-size:22px;letter-spacing:.04em;color:var(--navy);padding-top:10px}
+.tl li.key time{color:var(--red)}
+.tl li.move time{color:var(--muted);font-size:18px;padding-top:6px}
+.card{background:var(--paper);border:2px solid var(--line);border-radius:14px;padding:11px 14px;min-width:0}
+.tl li.key .card{border-color:var(--gold);background:linear-gradient(var(--gold-soft),var(--gold-soft)) left/5px 100% no-repeat,var(--paper)}
+.card h3{font-size:16px;color:var(--ink)}
+.card p{color:var(--muted);font-size:14.5px;margin-top:3px}
+.card .links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.map{font-size:13px;font-weight:700;color:var(--blue);text-decoration:none;background:var(--navy-soft);border-radius:999px;padding:2px 11px}
+.map:hover{background:var(--blue);color:#fff}
+.tag{display:inline-block;font-size:12px;color:#fff;background:var(--red);border-radius:999px;padding:0 9px;margin-left:6px;vertical-align:2px;font-weight:700}
+.leg{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding:6px 14px;font-size:14px;color:var(--muted);min-width:0;background:var(--navy-soft);border-radius:999px}
+.line{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-weight:700;white-space:nowrap}
+.line::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c)}
+.leg .arr{color:var(--ink)}
+.leg .map{margin-left:auto;background:var(--paper);order:4}
+@media (max-width:480px){.tl li{grid-template-columns:48px 1fr;gap:0 8px}.tl time{font-size:19px}.leg{border-radius:14px}}
+
+/* notes */
+.note{margin-top:18px;padding:14px 16px;background:var(--gold-soft);border:2px solid var(--gold);border-radius:14px;font-size:14.5px}
+.note.blue{background:var(--navy-soft);border-color:var(--blue)}
+.note b{display:block;margin-bottom:6px;color:var(--navy)}
+.note ul{margin:0;padding-left:0;list-style:none}
+.note li{position:relative;padding-left:20px}
+.note li::before{content:"★";position:absolute;left:0;top:0;color:var(--gold);font-size:13px}
+.note li ul{padding-top:2px}
+.note li ul li::before{content:"•";color:var(--muted)}
+.note li+li{margin-top:3px}
+
+/* checklists */
+.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (max-width:620px){.list{grid-template-columns:1fr}}
+.item{display:flex;gap:12px;align-items:flex-start;padding:11px 14px;background:var(--paper);border:2px solid var(--line);border-radius:14px;cursor:pointer;min-width:0}
+.item input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;margin-top:3px;border:2px solid var(--gold);border-radius:50%;background:var(--paper);display:grid;place-content:center;cursor:pointer}
+.item input::after{content:"★";color:var(--navy);font-size:12px;line-height:1;transform:scale(0)}
+.item input:checked{background:var(--gold)}
+.item input:checked::after{transform:scale(1)}
+.item .t{min-width:0}
+.item b{font-size:15px;color:var(--ink)}
+.item .area{font-size:12px;color:var(--blue);font-weight:700;margin-left:6px;white-space:nowrap}
+.item p{font-size:13.5px;color:var(--muted);margin-top:2px}
+.item p .map{margin-left:4px;white-space:nowrap}
+.item:has(input:checked){background:var(--gold-soft);border-color:var(--gold)}
+.item:has(input:checked) .t{opacity:.6}
+.item:has(input:checked) b{text-decoration:line-through}
+.item:focus-within{outline:2px solid var(--blue);outline-offset:2px}
+
+/* flights = movie tickets */
+.passes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:700px){.passes{grid-template-columns:1fr}}
+.pass{min-width:0;background:var(--paper);border-radius:14px;overflow:hidden;border:2px solid var(--navy);position:relative}
+.pass::before,.pass::after{content:"";position:absolute;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:var(--paper);border:2px solid var(--navy)}
+.pass::before{left:-11px}.pass::after{right:-11px}
+.pass .top{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:6px 14px;font-family:var(--f-show);font-size:17px;letter-spacing:.08em;color:#fff;background:var(--navy)!important}
+.pass:last-child .top{background:var(--gold)!important;color:var(--navy)}
+.pass .route{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:12px 18px}
+.pass .route .end{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.pass .route .end.r{align-items:flex-end;text-align:right}
+.pass .row{display:flex;align-items:baseline;gap:8px}
+.pass .iata{font-family:var(--f-show);font-size:32px;line-height:1;color:var(--navy);letter-spacing:.04em}
+.pass .tm{font-family:var(--f-show);font-size:22px;color:var(--red);letter-spacing:.04em}
+.pass .city{font-size:12.5px;color:var(--muted);margin-top:2px}
+.pass .plane{display:flex;align-items:center;gap:6px;color:var(--gold);font-size:15px;min-width:0}
+.pass .plane::before,.pass .plane::after{content:"";flex:1;border-top:2px dashed var(--line)}
+.pass .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;padding:6px 18px;font-size:13px;color:var(--muted);border-top:2px dashed var(--line)}
+
+/* hotel */
+.hotel{margin-top:16px;padding:14px 16px;background:var(--paper);border:2px solid var(--line);border-radius:14px}
+.hotel>p.eyebrow{color:var(--ink)}
+.hotel h3{font-size:17px;color:var(--navy)}
+.hotel .jp{color:var(--muted);font-size:13px}
+.kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;margin:12px 0 0}
+@media (max-width:560px){.kv{grid-template-columns:1fr}}
+.kv div{min-width:0;border-bottom:2px dashed var(--line);padding-bottom:6px}
+.kv dt{font-size:12px;color:var(--muted)}
+.kv dd{margin:0;font-size:14.5px;overflow-wrap:anywhere}
+.hotel .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.lp-hint{font-size:13px;color:var(--muted);margin-top:8px}
+[data-lp]{cursor:pointer;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;border-bottom:2px dashed var(--gold);transition:background .45s}
+[data-lp].pressing{background:var(--gold-soft)}
+[data-lp].ready{background:#FFE29A}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);background:var(--navy);color:#fff;padding:6px 18px;border-radius:999px;font-size:13.5px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:40;box-shadow:0 0 0 2px var(--gold)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}[data-lp],.toast{transition:none}}
+.hero{margin-bottom:12px}
+.nosuica{display:inline-block;font-size:12px;font-weight:700;color:var(--red);border:1.5px solid var(--red);border-radius:999px;padding:0 8px;line-height:1.6;white-space:nowrap}
+
+.hero .sub.acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:500px;margin:20px auto 4px;padding:16px 8px;background:#0C1530;border-radius:6px;position:relative}
+.hero .sub.acts::before,.hero .sub.acts::after{content:"";position:absolute;left:8px;right:8px;height:6px;
+  background:radial-gradient(circle,rgba(255,255,255,.85) 0 2.2px,transparent 2.6px) 0 50%/14px 6px repeat-x}
+.hero .sub.acts::before{top:5px}.hero .sub.acts::after{bottom:5px}
+.hero .sub.acts span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:0;padding:14px 4px;border-radius:3px;
+  background:linear-gradient(160deg,#2A4A96,#1B2E63);color:#fff;font-weight:700;font-size:15px;line-height:1.3;text-align:center;box-shadow:inset 0 0 0 1px rgba(244,179,33,.35)}
+.hero .sub.acts i{font-style:normal;font-family:var(--f-show);font-size:13px;letter-spacing:.2em;color:var(--gold);font-weight:400}
+@media (max-width:480px){.hero .sub.acts span{font-size:13.5px;padding:9px 2px}}
+.leg .alt{flex-basis:100%;order:5;font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:4px;margin-top:2px}
+.leg .alt b{color:var(--navy)}
+.item.food{cursor:default}
+.item .badge{display:inline-block;font-size:11px;font-weight:700;color:var(--navy);background:var(--gold-soft);border:1px solid var(--gold);border-radius:999px;padding:0 7px;margin-left:6px;vertical-align:1px}
+.card .ph{margin:-11px -14px 10px;border-radius:12px 12px 0 0;overflow:hidden;position:relative;background:var(--navy-soft)}
+.card .ph img{display:block;width:100%;height:auto;aspect-ratio:2/1;max-height:220px;object-fit:cover;object-position:center 40%}
+.card .ph figcaption{position:absolute;right:6px;bottom:5px;font-size:10px;line-height:1.5;background:rgba(0,0,0,.5);border-radius:4px;padding:0 6px}
+.card .ph figcaption a{color:#fff;text-decoration:none}
+.card .ph figcaption br{display:none}
+.card .ph figcaption a::after{content:""}
+.card ul.mini{margin:6px 0 0;padding-left:0;list-style:none;font-size:14px;color:var(--muted)}
+.card ul.mini li{position:relative;padding-left:14px}
+.card ul.mini li::before{content:"";position:absolute;left:2px;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.card ul.mini b{color:var(--ink);font-weight:700}
+.tl .card ul.mini li{display:block;padding-bottom:0;grid-template-columns:none}
+.tl .card ul.mini li+li{margin-top:2px}
+.tl .card ul.mini b{margin-right:6px}
+/* calm park: keep globe, marquee sign, area banners, tickets */
+.hero{overflow:hidden;padding-top:22px}
+.hero>*{position:relative;z-index:1}
+.globe{display:flex;justify-content:center;margin-bottom:2px}
+.globe svg{width:140px;height:140px}
+.globe .spin{animation:spin 10s linear infinite;transform-origin:100px 100px;transform-box:view-box}
+@keyframes spin{from{transform:scaleX(1)}50%{transform:scaleX(-1)}to{transform:scaleX(1)}}
+.hero h1{font-size:clamp(34px,8vw,54px)}
+/* day header = simple area banner */
+.day-head{background:var(--navy);color:#fff;border-radius:14px;padding:14px 16px}
+#day2 .day-head{background:var(--gold)}
+.day-head h2{color:#fff;font-size:20px}
+.day-head .eyebrow,#day2 .day-head .eyebrow{color:var(--gold)}
+.day-head p.lead{color:#DCE5FA}
+.date{background:var(--gold)!important;color:var(--navy);border-radius:12px}
+.date::before{background:repeating-linear-gradient(-45deg,var(--navy) 0 7px,var(--gold) 7px 14px)!important}
+.date .w{color:var(--navy)}
+/* times: clean */
+.tl time{font-family:var(--f-show);font-size:21px;color:var(--navy);padding-top:10px}
+.tl li.key time{color:var(--red)}
+.tl li.move time{font-size:17px;color:var(--muted);padding-top:6px}
+.tl li.key .card{background:var(--paper);border-color:var(--gold)}
+.sec-title h2::before{content:"★";color:var(--gold)}
+@media (prefers-reduced-motion:reduce){.globe .spin{animation:none}}
+@media (max-width:480px){.globe svg{width:112px;height:112px}}
+/* leg card layout */
+.leg{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;border-radius:12px!important;padding:8px 72px 8px 12px;background:var(--navy-soft)}
+.leg .arr{font-weight:700}
+.leg .how{flex-basis:100%;color:var(--ink);font-size:14px}
+.leg .alt{flex-basis:100%;order:0;border-top:1px dashed var(--line);padding-top:4px;margin-top:2px;font-size:13px;color:var(--muted)}
+.leg .alt b{color:var(--navy)}
+.leg .map{position:absolute;top:8px;right:10px;margin:0;order:0;background:var(--paper)}
+@media (max-width:480px){.leg{padding-right:12px}.leg .map{position:static;margin-left:auto}}
+/* tag spacing */
+.card h3{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px}
+.tag{margin:0;vertical-align:baseline;line-height:1.75;padding:0 9px;font-size:11.5px}
+#day2 .day-head h2,#day2 .day-head .eyebrow{color:var(--navy)!important}
+#day2 .day-head p.lead{color:#3A3320}
+#day2 .date{background:var(--navy)!important;color:#fff}
+#day2 .date::before{background:repeating-linear-gradient(-45deg,var(--gold) 0 7px,var(--navy) 7px 14px)!important}
+#day2 .date .w{color:var(--gold)}
+.hero .sub.acts span:nth-child(2){background:var(--gold);color:var(--navy);box-shadow:none}
+/* ticket notch: real cut-out */
+.pass{overflow:visible}
+.pass .top{border-radius:12px 12px 0 0}
+.pass::before,.pass::after{width:22px;height:22px;margin-top:-11px;border:2px solid var(--navy);background:var(--paper);border-radius:50%;z-index:2}
+.pass::before{left:-13px;border-top-color:transparent;border-left-color:transparent;transform:rotate(-45deg)}
+.pass::after{right:-13px;border-bottom-color:transparent;border-right-color:transparent;transform:rotate(-45deg)}
+.pass .tm{color:var(--muted)!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="globe" aria-hidden="true">
+      <svg viewBox="-4 -4 208 208" width="132" height="132">
+        <defs>
+          <radialGradient id="gb" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#7FC0FF"/><stop offset=".55" stop-color="#2F7FD8"/><stop offset="1" stop-color="#14306E"/></radialGradient>
+        </defs>
+        <g class="ring-back"><ellipse cx="100" cy="100" rx="94" ry="28" fill="none" stroke="#C98E12" stroke-width="7" transform="rotate(-18 100 100)"/></g>
+        <circle cx="100" cy="100" r="64" fill="url(#gb)"/>
+        <g fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.6">
+          <g class="spin"><ellipse cx="100" cy="100" rx="22" ry="64"/><ellipse cx="100" cy="100" rx="46" ry="64"/><line x1="100" y1="36" x2="100" y2="164"/></g>
+          <path d="M40 78 Q100 70 160 78"/><path d="M36 100 H164"/><path d="M40 122 Q100 130 160 122"/>
+        </g>
+        <path d="M6 100 A94 28 0 0 0 194 100" fill="none" stroke="#F4B321" stroke-width="7" stroke-linecap="round" transform="rotate(-18 100 100)"/>
+        <text x="100" y="108" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="30" letter-spacing="3" fill="#fff" transform="rotate(-18 100 100)">OSAKA</text>
+      </svg>
+    </div>
+    <p class="eyebrow">Osaka trip</p>
+    <h1>大阪三日遊 <em>快閃</em></h1>
+    <p class="sub acts"><span>市區逛街</span><span>環球影城</span><span>機場返台</span></p>
+  </header>
+</div>
+
+<nav class="tabs" aria-label="段落導覽">
+  <div class="wrap">
+    <a href="#overview">總覽</a>
+    <a href="#day1">Day 1</a>
+    <a href="#day2">Day 2・USJ</a>
+    <a href="#day3">Day 3・回程</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section id="overview">
+  
+  <div class="block" id="info">
+    <div class="sec-title"><h2>航班與住宿</h2><span class="eyebrow">台灣虎航</span></div>
+    <div class="passes">
+      <article class="pass" style="--c:#EC7A2C">
+        <div class="top"><span>去程・IT210</span><span>tigerlight</span></div>
+        <div class="route">
+          <div class="end"><div class="row"><span class="iata">TPE</span><span class="tm">07:00</span></div><span class="city">桃園 第一航廈</span></div>
+          <div class="plane" aria-hidden="true">✈</div>
+          <div class="end r"><div class="row"><span class="iata">KIX</span><span class="tm">10:25</span></div><span class="city">關西 第一航廈</span></div>
+        </div>
+        <div class="foot"><span>無託運行李・僅手提</span></div>
+      </article>
+      <article class="pass" style="--c:#C9601A">
+        <div class="top"><span>回程・IT211</span><span>tigersmart</span></div>
+        <div class="route">
+          <div class="end"><div class="row"><span class="iata">KIX</span><span class="tm">11:30</span></div><span class="city">關西 第一航廈</span></div>
+          <div class="plane" aria-hidden="true">✈</div>
+          <div class="end r"><div class="row"><span class="iata">TPE</span><span class="tm">13:50</span></div><span class="city">桃園 第一航廈</span></div>
+        </div>
+        <div class="foot"><span>託運每人 20 公斤</span></div>
+      </article>
+    </div>
+
+    <div class="hotel">
+      <p class="eyebrow">住宿 · 2 晚</p>
+      <h3 style="margin-top:6px">東橫INN 大阪通天閣前</h3>
+      <p class="jp">Toyoko Inn Osaka Tsutenkaku Mae</p>
+      <dl class="kv">
+        <div style="grid-column:1/-1"><dt>地址（日文）</dt><dd><span id="v-addr" data-lp tabindex="0">〒556-0002 大阪府大阪市浪速区恵美須東 2-3-4</span></dd></div>
+        <div style="grid-column:1/-1"><dt>地址（英文）</dt><dd><span id="v-addr-en" data-lp tabindex="0">2-3-4 Ebisuhigashi, Naniwa-ku, Osaka 556-0002, Japan</span></dd></div>
+        <div><dt>入住／退房</dt><dd>15:00 後入住・櫃檯 24 小時</dd></div>
+        <div><dt>飯店電話</dt><dd class="num"><span id="v-tel" data-lp tabindex="0">+81-6-7662-1045</span></dd></div>
+      </dl>
+      <p class="lp-hint">長按地址或電話可複製</p>
+      <div class="links" style="display:flex;gap:6px;margin-top:14px;flex-wrap:wrap">
+        <a class="map" href="https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Osaka+Tsutenkaku+Mae" target="_blank" rel="noopener">在 Google 地圖開啟</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="block" id="prep">
+    <div class="sec-title"><h2>出發準備</h2><span class="eyebrow">出發前完成</span></div>
+    <div class="list">
+      <label class="item"><input type="checkbox" id="p-vjw"><span class="t"><b>Visit Japan Web</b><p>每人各自填好入境審查與海關申報，截圖 QR Code</p></span></label>
+      <label class="item"><input type="checkbox" id="p-app"><span class="t"><b>下載 USJ 官方 App</b><p>綁定門票，當天看等候時間與表演時間</p></span></label>
+      <label class="item"><input type="checkbox" id="p-icoca"><span class="t"><b>Suica（西瓜卡）</b><p>可以加進 iPhone 錢包，這次搭的南海、御堂筋線、JR 都直接刷</p></span></label>
+      <label class="item"><input type="checkbox" id="p-carry"><span class="t"><b>去程手提行李</b><p>沒有託運：液體 100ml 以下、尖銳物不能帶，重量以虎航規定為準</p></span></label>
+      <label class="item"><input type="checkbox" id="p-insurance"><span class="t"><b>旅遊保險</b><p>每人都要保旅平險，記得加保海外突發疾病</p></span></label>
+    </div>
+    <p class="hint">勾選狀態只存在這台裝置的瀏覽器裡，換手機不會同步</p>
+  </div>
+
+  <div class="block" id="tax">
+    <div class="sec-title"><h2>退稅新制</h2></div>
+    <div class="note" style="margin-top:0">
+      <b>購物先付含稅價，出境時才退稅</b>
+      <ul>
+        <li>日本免稅改成「結帳先付含稅價，出境時再退稅」</li>
+        <li>購物時帶護照，結帳時跟店員說要辦免稅登記</li>
+        <li>免稅品不要先拆封，回程放在方便拿出來的地方</li>
+        <li>回程出境時在關西機場海關確認商品後才退稅，要多預留時間</li>
+        <li>實際流程請出發前再看一次官方公告或店家說明</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="block" id="food">
+    <div class="sec-title"><h2>美食清單</h2></div>
+    <div class="list">
+      <div class="item food"><span class="t"><b>福太郎 本店</b><span class="area">難波</span><span class="badge">食べログ百名店 2025</span><p>大阪燒和蔥燒都是招牌，晚餐常排隊 <a class="map" href="https://www.google.com/maps/search/?api=1&query=福太郎+本店+難波" target="_blank" rel="noopener">地圖</a></p></span></div>
+      <div class="item food"><span class="t"><b>味乃家 本店</b><span class="area">難波</span><span class="badge">食べログ百名店 2025</span><p>料多厚實的大阪燒，觀光客和在地人都多 <a class="map" href="https://www.google.com/maps/search/?api=1&query=味乃家+本店" target="_blank" rel="noopener">地圖</a></p></span></div>
+      <div class="item food"><span class="t"><b>美津の</b><span class="area">道頓堀</span><span class="badge">食べログ百名店 2025</span><p>山藥麵糊做的大阪燒，口感鬆軟 <a class="map" href="https://www.google.com/maps/search/?api=1&query=美津の+道頓堀" target="_blank" rel="noopener">地圖</a></p></span></div>
+      <div class="item food"><span class="t"><b>お好み焼き ちとせ</b><span class="area">動物園前</span><span class="badge">食べログ百名店 2025</span><p>飯店走路就到，在地人的大阪燒老店 <a class="map" href="https://www.google.com/maps/search/?api=1&query=お好み焼き+ちとせ+動物園前" target="_blank" rel="noopener">地圖</a></p></span></div>
+      <div class="item food"><span class="t"><b>たこ焼道楽 わなか 千日前本店</b><span class="area">難波</span><span class="badge">食べログ人氣</span><p>外脆內軟的章魚燒，可以邊走邊吃 <a class="map" href="https://www.google.com/maps/search/?api=1&query=わなか+千日前本店" target="_blank" rel="noopener">地圖</a></p></span></div>
+      <div class="item food"><span class="t"><b>たこ焼 やまちゃん 本店</b><span class="area">天王寺</span><span class="badge">食べログ人氣</span><p>高湯味濃，不沾醬也好吃，就在 HARUKAS 附近 <a class="map" href="https://www.google.com/maps/search/?api=1&query=やまちゃん+本店+天王寺" target="_blank" rel="noopener">地圖</a></p></span></div>
+      <div class="item food"><span class="t"><b>串かつ やっこ</b><span class="area">新世界</span><span class="badge">食べログ人氣</span><p>新世界的人氣串炸店 <a class="map" href="https://www.google.com/maps/search/?api=1&query=串かつ+やっこ+新世界" target="_blank" rel="noopener">地圖</a></p></span></div>
+      <div class="item food"><span class="t"><b>串かつ だるま 新世界総本店</b><span class="area">新世界</span><span class="badge">大阪代表</span><p>串炸代表店，醬汁不能沾第二次 <a class="map" href="https://www.google.com/maps/search/?api=1&query=串かつだるま+新世界総本店" target="_blank" rel="noopener">地圖</a></p></span></div>
+      <div class="item food"><span class="t"><b>551 蓬萊</b><span class="area">難波本店</span><span class="badge">大阪伴手禮</span><p>豬肉包，熱熱吃最好 <a class="map" href="https://www.google.com/maps/search/?api=1&query=551蓬莱+本店" target="_blank" rel="noopener">地圖</a></p></span></div>
+      <div class="item food"><span class="t"><b>りくろーおじさんの店</b><span class="area">難波本店</span><span class="badge">大阪伴手禮</span><p>現烤起司蛋糕，出爐會搖鈴 <a class="map" href="https://www.google.com/maps/search/?api=1&query=りくろーおじさんの店+なんば本店" target="_blank" rel="noopener">地圖</a></p></span></div>
+    </div>
+  </div>
+
+  </section>
+
+  <!-- DAY 1 -->
+  <section id="day1" class="day">
+    <div class="day-head">
+      <div class="date"><span class="d">1</span><span class="w">DAY</span></div>
+      <div class="txt">
+        <p class="eyebrow">Day 1</p>
+        <h2>梅田・道頓堀・柯南</h2>
+        <p class="lead">先放行李，輕裝出門</p>
+      </div>
+    </div>
+    <ol class="tl">
+      <li><time>05:00</time><div class="card"><h3>桃園機場第一航廈報到</h3><p>去程只有手提行李，可先線上報到，液體每瓶 100ml 以下，行動電源要隨身</p></div></li>
+      <li class="key"><time>07:00</time><div class="card"><h3>IT210 起飛</h3><p>飛行約 2 小時 25 分（日本比台灣快 1 小時）</p></div></li>
+      <li class="key"><time>10:25</time><div class="card"><h3>抵達關西機場第一航廈</h3><p>入境時出示 Visit Japan Web 的 QR Code，出關後到南海電鐵站，直接刷 Suica 進站</p><div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport+Terminal+1" target="_blank" rel="noopener">地圖</a></div></div></li>
+      <li class="move"><time>11:30</time><div class="leg"><span class="line" style="--c:#1D5BB8">南海</span><span class="arr">關西空港 → 新今宮</span><span class="how">空港急行・約 45 分・刷 Suica</span><span class="alt"><b>或 特急 Rapi:t</b> 約 35 分，車資刷 Suica，另買座位票 ¥700（線上買 ¥550）</span><a class="map" href="https://www.google.com/maps/dir/?api=1&origin=関西空港駅&destination=新今宮駅&travelmode=transit" target="_blank" rel="noopener">路線</a></div></li>
+      <li><time>12:30</time><div class="card"><h3>到飯店寄放行李</h3><p>從新今宮站通天閣口（東口）步行約 6 分，經過新世界，15:00 後才能入住，先寄放就好</p><div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Toyoko+Inn+Osaka+Tsutenkaku+Mae" target="_blank" rel="noopener">東橫INN 通天閣前</a></div></div></li>
+      <li class="key"><time>13:00</time><div class="card"><h3>午餐：新世界串炸</h3><p>ジャンジャン横丁的八重勝或新世界的だるま，醬汁不能沾第二次</p><div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=八重勝+新世界" target="_blank" rel="noopener">八重勝</a></div></div></li>
+      <li class="key"><time>13:45</time><div class="card"><figure class="ph"><img src="img/tsutenkaku.jpg" alt="通天閣" style="object-position:center 30%" loading="lazy" width="420" height="420"><figcaption><a href="https://commons.wikimedia.org/wiki/File:Tsutenkaku_108m.jpg" target="_blank" rel="noopener">Sakai Yayoi ・CC0</a></figcaption></figure><h3>通天閣</h3><p>現場買票</p><ul class="mini"><li><b>展望台 ¥1,500</b> 一般＋頂樓戶外，摸ビリケン腳底</li><li><b>溜滑梯 ¥1,100</b> 另外付費</li><li><b>Dive &amp; Walk ¥3,000</b> 高空走外圍＋往下跳，約 40–60 分，建議預約，喝酒前玩</li></ul><div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=通天閣" target="_blank" rel="noopener">通天閣</a></div></div></li>
+      <li class="move"><time>14:15</time><div class="leg"><span class="line" style="--c:#E5171F">御堂筋線</span><span class="arr">動物園前 → 梅田</span><span class="how">往千里中央・6 站</span><span class="alt"><b>或 JR 環狀線</b> 新今宮 → 大阪，Grand Front 就在大阪站旁，刷 Suica</span><a class="map" href="https://www.google.com/maps/dir/?api=1&origin=動物園前駅&destination=グランフロント大阪&travelmode=transit" target="_blank" rel="noopener">路線</a></div></li>
+      <li class="key"><time>14:30</time><div class="card"><figure class="ph"><img src="img/grandfront.jpg" alt="Grand Front 大阪" loading="lazy" width="420" height="420"><figcaption><a href="https://commons.wikimedia.org/wiki/File:Grand_Front_Osaka_-_Shopping_complex_north_of_Osaka_Station.jpg" target="_blank" rel="noopener">Dudva ・CC0</a></figcaption></figure><h3>梅田：Disney Gift of Story 集章 <span class="tag">免費</span></h3><p>館內傳單架拿集章卡，兩棟共 5 個章，集滿換限定貼紙（送完為止）</p><div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=グランフロント大阪" target="_blank" rel="noopener">① Grand Front 大阪：拿集章卡、開始集章</a><a class="map" href="https://www.google.com/maps/search/?api=1&query=グラングリーン大阪" target="_blank" rel="noopener">② Grand Green 大阪：集剩下的章</a></div></div></li>
+      <li class="move"><time>16:00</time><div class="leg"><span class="line" style="--c:#E5171F">御堂筋線</span><span class="arr">梅田 → 心齋橋</span><span class="how">往天王寺・3 站</span><span class="alt"><b>或 四つ橋線</b> 西梅田 → 四ツ橋，走地下道到心齋橋，刷 Suica</span><a class="map" href="https://www.google.com/maps/dir/?api=1&origin=梅田駅&destination=心斎橋駅&travelmode=transit" target="_blank" rel="noopener">路線</a></div></li>
+      <li class="key"><time>16:15</time><div class="card"><figure class="ph"><img src="img/shinsaibashi.jpg" alt="心齋橋筋商店街" loading="lazy" width="420" height="420"><figcaption><a href="https://commons.wikimedia.org/wiki/File:Shinsaibashi-suji_Shopping_Street_20190201.jpg" target="_blank" rel="noopener">そらみみ ・CC BY-SA 4.0</a></figcaption></figure><h3>心齋橋購物</h3><p>大丸心齋橋（9F 寶可夢中心 DX）、心齋橋 PARCO，再沿心齋橋筋商店街往南走，藥妝店一路都是，可以比價</p><div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=大丸心斎橋店" target="_blank" rel="noopener">大丸心齋橋</a><a class="map" href="https://www.google.com/maps/search/?api=1&query=心斎橋筋商店街" target="_blank" rel="noopener">心齋橋筋商店街</a></div></div></li>
+      <li class="key"><time>18:00</time><div class="card"><figure class="ph"><img src="img/dotonbori.jpg" alt="道頓堀夜景" loading="lazy" width="420" height="420"><figcaption><a href="https://commons.wikimedia.org/wiki/File:Glico_sign_at_night,_25th_October_2014.JPG" target="_blank" rel="noopener">Tokumeigakarinoaoshima ・CC0</a></figcaption></figure><h3>道頓堀：固力果看板＋晚餐</h3><p>戎橋拍固力果跑跑人，晚餐吃大阪燒（美津の）或章魚燒，餓的話再來一碗金龍拉麵</p><div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=戎橋+グリコサイン" target="_blank" rel="noopener">戎橋</a><a class="map" href="https://www.google.com/maps/search/?api=1&query=美津の+道頓堀" target="_blank" rel="noopener">美津の</a></div></div></li>
+      <li class="move"><time>19:30</time><div class="leg"><span class="line" style="--c:#E5171F">御堂筋線</span><span class="arr">なんば → 天王寺</span><span class="how">往天王寺・3 站</span><a class="map" href="https://www.google.com/maps/dir/?api=1&origin=なんば駅&destination=天王寺駅&travelmode=transit" target="_blank" rel="noopener">路線</a></div></li>
+      <li class="key"><time>19:45</time><div class="card"><figure class="ph"><img src="img/harukas.jpg" alt="阿倍野 HARUKAS" loading="lazy" width="420" height="420"><figcaption><a href="https://commons.wikimedia.org/wiki/File:Abeno_Harukas_Osaka_Japan01-r.jpg" target="_blank" rel="noopener">Oilstreet ・CC BY 2.5</a></figcaption></figure><h3>阿倍野 HARUKAS 300 × 名探偵柯南</h3><p>300 公尺高展望台看夜景＋柯南平次和葉特展，最後入場 21:30，大人 ¥2,200</p><div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=ハルカス300+展望台" target="_blank" rel="noopener">HARUKAS 300</a></div></div></li>
+      <li><time>21:00</time><div class="card"><h3>回飯店辦入住、放東西</h3><p>從天王寺走回飯店約 15 分，或搭御堂筋線坐 1 站到動物園前</p><div class="links"><a class="map" href="https://www.google.com/maps/dir/?api=1&origin=天王寺駅&destination=Toyoko+Inn+Osaka+Tsutenkaku+Mae&travelmode=walking" target="_blank" rel="noopener">步行路線</a></div></div></li>
+      <li><time>21:30</time><div class="card"><h3>居酒屋，跟朋友會合</h3><p>飯店附近，店家再約，明天 07:30 出發去 USJ</p></div></li>
+    </ol>
+  </section>
+
+  <!-- DAY 2 -->
+  <section id="day2" class="day usj">
+    <div class="day-head">
+      <div class="date"><span class="d">2</span><span class="w">DAY</span></div>
+      <div class="txt">
+        <p class="eyebrow">Day 2</p>
+        <h2>環球影城一整天</h2>
+        <p class="lead">12:30 用餐，15:00 VIP</p>
+      </div>
+    </div>
+    <ol class="tl">
+      <li><time>07:00</time><div class="card"><h3>飯店免費早餐</h3><p>早餐 06:30–09:00，吃飽再出發</p></div></li>
+      <li class="move"><time>07:30</time><div class="leg"><span class="line" style="--c:#F08300">環狀線</span><span class="line" style="--c:#2B6CC4">ゆめ咲線</span><span class="arr">新今宮 → USJ</span><span class="how">環狀線往西九条，在西九条換ゆめ咲線，坐 2 站到ユニバーサルシティ・約 25 分</span><span class="alt"><b>或 直通車</b> 終點寫「ユニバーサルシティ」的環狀線列車直接開到 USJ，不用換車</span><a class="map" href="https://www.google.com/maps/dir/?api=1&origin=Toyoko+Inn+Osaka+Tsutenkaku+Mae&destination=ユニバーサルシティ駅&travelmode=transit" target="_blank" rel="noopener">路線</a></div></li>
+      <li class="key"><time>08:00</time><div class="card"><figure class="ph"><img src="img/usj.jpg" alt="日本環球影城入口" loading="lazy" width="420" height="420"><figcaption><a href="https://commons.wikimedia.org/wiki/File:Universal_Studios_Japan_entrance.jpg" target="_blank" rel="noopener">Csiiiyu ・CC BY-SA 4.0</a></figcaption></figure><h3>到園區入口排隊</h3><p>官網公布當天營業時間 09:00–22:00（可能臨時變動，前一天再看一次官網），進園前先在 App 綁好門票</p><div class="links"><a class="map" href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank" rel="noopener">日本環球影城</a></div></div></li>
+      <li class="key"><time>12:30</time><div class="card"><h3>園內用餐 <span class="tag">已預約</span></h3><p>提早到餐廳報到</p></div></li>
+      <li class="key"><time>15:00</time><div class="card"><h3>VIP 體驗</h3><p>VIP 方案 5，15:00–19:30，開始前 30 分鐘（14:30 前）到「VIP エクスペリエンス受付」報到</p></div></li>
+      <li class="move"><time>19:45</time><div class="leg"><span class="line" style="--c:#2B6CC4">ゆめ咲線</span><span class="line" style="--c:#F08300">環狀線</span><span class="arr">USJ → 新今宮</span><span class="how">ゆめ咲線坐 2 站到西九条，換環狀線往天王寺方向到新今宮・約 25 分</span><a class="map" href="https://www.google.com/maps/dir/?api=1&origin=ユニバーサルシティ駅&destination=Toyoko+Inn+Osaka+Tsutenkaku+Mae&travelmode=transit" target="_blank" rel="noopener">路線</a></div></li>
+      <li><time>20:30</time><div class="card"><h3>回飯店休息</h3><p>從新今宮站通天閣口走回飯店約 6 分</p></div></li>
+    </ol>
+    <div class="note blue">
+      <b>USJ 注意事項</b>
+      <ul>
+        <li>出園後不能再入園</li>
+        <li>不能帶進園的東西：
+          <ul style="margin-top:2px">
+            <li>食物（嬰兒副食品例外）</li>
+            <li>玻璃瓶、罐裝飲料、酒類</li>
+            <li>自拍棒、三腳架、單腳架</li>
+            <li>行李箱、大型行李（要先寄放在園外的置物櫃）</li>
+            <li>刀具等危險物品、空拍機</li>
+          </ul>
+        </li>
+        <li>App 很耗電，帶行動電源，傍晚會冷，帶件外套</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DAY 3 -->
+  <section id="day3" class="day">
+    <div class="day-head">
+      <div class="date"><span class="d">3</span><span class="w">DAY</span></div>
+      <div class="txt">
+        <p class="eyebrow">Day 3</p>
+        <h2>搭南海去機場</h2>
+        <p class="lead">前一晚先把行李裝好</p>
+      </div>
+    </div>
+    <ol class="tl">
+      <li><time>06:45</time><div class="card"><h3>早餐、整理行李</h3><p>液體、噴霧類放託運，行動電源、鋰電池放隨身</p></div></li>
+      <li><time>07:40</time><div class="card"><h3>退房，步行到新今宮站</h3><p>走到南海新今宮站約 6 分</p></div></li>
+      <li class="move"><time>08:00</time><div class="leg"><span class="line" style="--c:#1D5BB8">南海</span><span class="arr">新今宮 → 關西空港</span><span class="how">空港急行・終點要是関西空港・約 45 分・刷 Suica</span><span class="alt"><b>或 特急 Rapi:t</b> 約 35 分，車資刷 Suica，另買座位票 ¥700（線上買 ¥550）</span><a class="map" href="https://www.google.com/maps/dir/?api=1&origin=新今宮駅&destination=関西国際空港+第1ターミナル&travelmode=transit" target="_blank" rel="noopener">路線</a></div></li>
+      <li class="key"><time>08:50</time><div class="card"><h3>關西機場第一航廈報到託運</h3><p>國際線建議起飛前 2.5 小時到，櫃檯關閉時間以虎航規定為準，若有退稅手續，出境時要多預留時間</p></div></li>
+      <li><time>09:45</time><div class="card"><h3>出境、免稅店最後採買</h3><p>用完剩下的日圓零錢</p></div></li>
+      <li class="key"><time>11:30</time><div class="card"><h3>IT211 起飛</h3><p>13:50（台灣時間）抵達桃園第一航廈</p></div></li>
+    </ol>
+  </section>
+  
+
+
+
+</main>
+
+<script>
+(function(){
+  // today highlight (Japan time)
+  var now=new Date();
+  var jp=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Tokyo'}));
+  var today=jp.getFullYear()+'-'+String(jp.getMonth()+1).padStart(2,'0')+'-'+String(jp.getDate()).padStart(2,'0');
+  document.querySelectorAll('nav.tabs a[data-date]').forEach(function(a){ if(a.dataset.date===today) a.classList.add('today'); });
+
+  // checklist persistence (per device)
+  var KEY='osaka2026-checks', state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){}
+  document.querySelectorAll('.item input[type=checkbox]').forEach(function(cb){
+    if(state[cb.id]) cb.checked=true;
+    cb.addEventListener('change',function(){
+      state[cb.id]=cb.checked;
+      try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){}
+    });
+  });
+
+  // tabs
+  var secs=[].slice.call(document.querySelectorAll('main > section'));
+  var ids=secs.map(function(x){return x.id;});
+  var navLinks=[].slice.call(document.querySelectorAll('nav.tabs a'));
+  var tripDay=null;
+  function show(id,scroll){
+    if(ids.indexOf(id)<0) id=tripDay||'overview';
+    secs.forEach(function(x){x.hidden=(x.id!==id);});
+    navLinks.forEach(function(a){
+      if(a.getAttribute('href')==='#'+id){a.setAttribute('aria-current','page');a.scrollIntoView({block:'nearest',inline:'center'});}
+      else a.removeAttribute('aria-current');
+    });
+    if(scroll){var nav=document.querySelector('nav.tabs');var top=nav.getBoundingClientRect().top+window.scrollY;if(window.scrollY>top)window.scrollTo(0,top);}
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]'); if(!a) return;
+    var id=a.getAttribute('href').slice(1); if(ids.indexOf(id)<0) return;
+    e.preventDefault();
+    try{history.replaceState(null,'','#'+id);}catch(err){location.hash=id;}
+    show(id,true);
+  });
+  window.addEventListener('hashchange',function(){show(location.hash.slice(1),true);});
+  show(location.hash.slice(1),false);
+
+  // long-press to copy
+  var toast=document.createElement('div'); toast.className='toast'; toast.setAttribute('role','status'); document.body.appendChild(toast);
+  var tt; function showToast(m){ toast.textContent=m; toast.classList.add('on'); clearTimeout(tt); tt=setTimeout(function(){toast.classList.remove('on');},1400); }
+  document.querySelectorAll('[data-lp]').forEach(function(el){
+    var start=0, timer=null, ready=false;
+    function copy(){
+      var txt=el.textContent.trim();
+      function fallback(){ var r=document.createRange(); r.selectNodeContents(el); var s=getSelection(); s.removeAllRanges(); s.addRange(r); showToast('已選取，請手動複製'); }
+      try{ navigator.clipboard.writeText(txt).then(function(){ showToast('已複製'); },fallback); }catch(e){ fallback(); }
+    }
+    el.addEventListener('pointerdown',function(){ start=Date.now(); ready=false; el.classList.add('pressing'); timer=setTimeout(function(){ ready=true; el.classList.add('ready'); },450); });
+    function end(e){ clearTimeout(timer); el.classList.remove('pressing','ready'); if(e.type==='pointerup' && ready){ copy(); } ready=false; }
+    el.addEventListener('pointerup',end); el.addEventListener('pointerleave',end); el.addEventListener('pointercancel',end);
+    el.addEventListener('contextmenu',function(e){ e.preventDefault(); });
+    el.addEventListener('keydown',function(e){ if(e.key==='Enter'){ copy(); } });
+  });
+})();
+</script>
+</body>
+</html>
